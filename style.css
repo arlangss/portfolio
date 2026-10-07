@@ -4,132 +4,255 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    background: #f5f5f5;
+    color: #222;
+    padding-bottom: 80px;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+
+/* NAVBAR */
+
+.navbar {
+    background: white;
+    padding: 16px 5%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
-    background: #111827;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-nav h2 {
-    color: #38bdf8;
+.logo {
+    font-size: 22px;
+    font-weight: bold;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-section {
-    min-height: 100vh;
-    padding: 100px 8%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#home {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-}
-
-#home h1 {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-#home p {
-    max-width: 600px;
+.cart {
     font-size: 20px;
-    line-height: 1.7;
-    color: #cbd5e1;
 }
 
-button {
-    margin-top: 30px;
-    padding: 14px 25px;
+
+/* SEARCH */
+
+.search-box {
+    padding: 20px 5%;
+    background: white;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* CATEGORY */
+
+.category {
+    padding: 20px 5%;
+}
+
+.category h2,
+.products h2 {
+    margin-bottom: 15px;
+}
+
+.category-list {
+    display: flex;
+    gap: 10px;
+
+    overflow-x: auto;
+}
+
+.category-list button {
+    white-space: nowrap;
+
+    padding: 10px 15px;
 
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
 
-    background: #38bdf8;
-    color: #0f172a;
-
-    font-size: 16px;
-    font-weight: bold;
+    background: white;
 
     cursor: pointer;
 }
 
-button:hover {
-    transform: translateY(-3px);
+
+/* PRODUCTS */
+
+.products {
+    padding: 10px 5%;
 }
 
-section h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card {
-    max-width: 500px;
-
-    padding: 30px;
-
-    background: #1e293b;
-
-    border-radius: 15px;
-
-    border: 1px solid #334155;
+.section-title a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.card h3 {
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.product {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.06);
+}
+
+
+.product-image {
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eee;
+
+    font-size: 60px;
+}
+
+
+.product-info {
+    padding: 12px;
+}
+
+.product-info h3 {
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+.price {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+.location {
+    font-size: 12px;
+
+    color: #777;
+
     margin-bottom: 10px;
 }
 
-.card p {
-    color: #cbd5e1;
-    line-height: 1.6;
+
+.buy-button {
+    width: 100%;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #111827;
+
+    color: white;
+
+    cursor: pointer;
 }
 
-@media (max-width: 700px) {
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
+/* BOTTOM NAV */
+
+.bottom-nav {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    padding: 10px 0;
+
+    box-shadow:
+        0 -2px 10px rgba(0,0,0,.1);
+
+    z-index: 20;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+
+    color: #555;
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+.bottom-nav span {
+    display: block;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+
+    .product-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
     }
 
-    nav a {
-        margin: 0 8px;
-        font-size: 14px;
+    .bottom-nav {
+        display: none;
     }
 
-    #home h1 {
-        font-size: 38px;
+    .search-box,
+    .category,
+    .products {
+        max-width: 1200px;
+
+        margin: auto;
     }
 
-    section h2 {
-        font-size: 32px;
-    }
 }
