@@ -4,230 +4,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LangsKuy Market</title>
+    <title>ZEUS Market</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-
-        <div class="logo">
-            🛍️ LangsKuy
-        </div>
-
-        <div class="cart">
-            🛒 <span id="cart-count">0</span>
-        </div>
-
-    </nav>
-
-
-    <!-- SEARCH -->
-    <section class="search-box">
-
-        <input
-            type="text"
-            id="search"
-            placeholder="🔍 Cari produk..."
-        >
-
-    </section>
-
-
-    <!-- KATEGORI -->
-    <section class="category">
-
-        <h2>Kategori</h2>
-
-        <div class="category-list">
-
-            <button>👕 Fashion</button>
-            <button>📱 Elektronik</button>
-            <button>🎮 Gaming</button>
-            <button>💻 Laptop</button>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUK -->
-    <section class="products">
-
-        <div class="section-title">
-
-            <h2>Produk Terbaru</h2>
-
-            <a href="#">Lihat Semua</a>
-
-        </div>
-
-
-        <div class="product-grid">
-
-
-            <!-- PRODUK 1 -->
-            <div class="product">
-
-                <div class="product-image">
-                    👕
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Kaos Oversize</h3>
-
-                    <p class="price">
-                        Rp50.000
-                    </p>
-
-                    <p class="location">
-                        📍 Bekasi
-                    </p>
-
-                    <button
-                        onclick="addToCart()"
-                        class="buy-button">
-
-                        + Keranjang
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUK 2 -->
-            <div class="product">
-
-                <div class="product-image">
-                    🎧
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Headset Gaming</h3>
-
-                    <p class="price">
-                        Rp120.000
-                    </p>
-
-                    <p class="location">
-                        📍 Jakarta
-                    </p>
-
-                    <button
-                        onclick="addToCart()"
-                        class="buy-button">
-
-                        + Keranjang
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUK 3 -->
-            <div class="product">
-
-                <div class="product-image">
-                    🎮
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Game Controller</h3>
-
-                    <p class="price">
-                        Rp150.000
-                    </p>
-
-                    <p class="location">
-                        📍 Bandung
-                    </p>
-
-                    <button
-                        onclick="addToCart()"
-                        class="buy-button">
-
-                        + Keranjang
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUK 4 -->
-            <div class="product">
-
-                <div class="product-image">
-                    📱
-                </div>
-
-                <div class="product-info">
-
-                    <h3>Smartphone</h3>
-
-                    <p class="price">
-                        Rp1.500.000
-                    </p>
-
-                    <p class="location">
-                        📍 Cikarang
-                    </p>
-
-                    <button
-                        onclick="addToCart()"
-                        class="buy-button">
-
-                        + Keranjang
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- BOTTOM NAVIGATION -->
-    <div class="bottom-nav">
-
-        <a href="#">
-            🏠
-            <span>Home</span>
-        </a>
-
-        <a href="#">
-            🔍
-            <span>Cari</span>
-        </a>
-
-        <a href="#">
-            🛒
-            <span>Keranjang</span>
-        </a>
-
-        <a href="#">
-            👤
-            <span>Akun</span>
-        </a>
-
+<header class="header">
+    <div class="logo">
+        <span>⚡</span> ZEUS
     </div>
 
+    <div class="header-actions">
+        <button>♡</button>
+        <button>🛒</button>
+    </div>
+</header>
 
-    <script src="script.js"></script>
+
+<main>
+
+    <section class="hero">
+
+        <div>
+            <p class="small-title">ZEUS MARKETPLACE</p>
+
+            <h1>
+                Temukan barang<br>
+                <span>yang kamu mau.</span>
+            </h1>
+
+            <p class="hero-text">
+                Belanja berbagai produk pilihan dengan
+                tampilan sederhana dan nyaman di HP.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="search-area">
+
+        <div class="search">
+            <span>⌕</span>
+
+            <input
+                type="text"
+                placeholder="Cari produk..."
+            >
+
+            <button>Cari</button>
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-head">
+            <h2>Kategori</h2>
+            <a href="#">Semua</a>
+        </div>
+
+        <div class="categories">
+
+            <div class="category active">
+                <div>✦</div>
+                <span>Semua</span>
+            </div>
+
+            <div class="category">
+                <div>👕</div>
+                <span>Fashion</span>
+            </div>
+
+            <div class="category">
+                <div>📱</div>
+                <span>Gadget</span>
+            </div>
+
+            <div class="category">
+                <div>🎮</div>
+                <span>Gaming</span>
+            </div>
+
+            <div class="category">
+                <div>💻</div>
+                <span>Laptop</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-head">
+            <h2>Produk Pilihan</h2>
+            <a href="#">Lihat semua →</a>
+        </div>
+
+
+        <div class="products">
+
+
+            <article class="product">
+
+                <div class="product-img">
+                    <span>👟</span>
+
+                    <button class="favorite">♡</button>
+
+                    <label>BEST</label>
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Fashion
+                    </p>
+
+                    <h3>
+                        Sneakers Urban Classic
+                    </h3>
+
+                    <div class="rating">
+                        ★ 4.9
+                        <span>(128)</span>
+                    </div>
+
+                    <div class="bottom-product">
+
+                        <strong>
+                            Rp299.000
+                        </strong>
+
+                        <button class="add">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product">
+
+                <div class="product-img">
+                    <span>🎧</span>
+
+                    <button class="favorite">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Elektronik
+                    </p>
+
+                    <h3>
+                        Wireless Headphone Pro
+                    </h3>
+
+                    <div class="rating">
+                        ★ 4.8
+                        <span>(86)</span>
+                    </div>
+
+                    <div class="bottom-product">
+
+                        <strong>
+                            Rp159.000
+                        </strong>
+
+                        <button class="add">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product">
+
+                <div class="product-img">
+                    <span>⌨️</span>
+
+                    <button class="favorite">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Gaming
+                    </p>
+
+                    <h3>
+                        Mechanical Keyboard RGB
+                    </h3>
+
+                    <div class="rating">
+                        ★ 4.9
+                        <span>(214)</span>
+                    </div>
+
+                    <div class="bottom-product">
+
+                        <strong>
+                            Rp449.000
+                        </strong>
+
+                        <button class="add">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="product">
+
+                <div class="product-img">
+                    <span>📱</span>
+
+                    <button class="favorite">♡</button>
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Gadget
+                    </p>
+
+                    <h3>
+                        Smartphone X Series
+                    </h3>
+
+                    <div class="rating">
+                        ★ 4.7
+                        <span>(65)</span>
+                    </div>
+
+                    <div class="bottom-product">
+
+                        <strong>
+                            Rp1.899.000
+                        </strong>
+
+                        <button class="add">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<nav class="bottom-nav">
+
+    <a class="active">
+        <span>⌂</span>
+        Home
+    </a>
+
+    <a>
+        <span>⌕</span>
+        Cari
+    </a>
+
+    <a>
+        <span>♡</span>
+        Favorit
+    </a>
+
+    <a>
+        <span>🛒</span>
+        Keranjang
+    </a>
+
+    <a>
+        <span>◯</span>
+        Akun
+    </a>
+
+</nav>
 
 </body>
 </html>
